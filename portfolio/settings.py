@@ -54,7 +54,8 @@ MIDDLEWARE = [
 #     '127.0.0.1',
 # ]
 
-ROOT_URLCONF = 'portfolio.urls'
+#ROOT_URLCONF = 'portfolio.urls'
+ROOT_URLCONF = 'playground.urls'
 
 TEMPLATES = [
     {
