@@ -99,40 +99,42 @@ function hide_orange(){
 }
 
 
-function sendJSON(){ 
+nction sendJSON(){ 
                
-    let result = document.querySelector('#result'); 
-    let intent = document.querySelector('#intent').value; 
-    let label = document.querySelector('#label').value;    
-    // Creating a XHR object 
-    let xhr = new XMLHttpRequest(); 
-    let url = "https://ml-models-api-kristianf89.herokuapp.com/sentiment"; 
-    //let url = "http://127.0.0.1:5000/sentiment"; 
+  let result = document.querySelector('#result'); 
+  let intent = document.querySelector('#intent').value; 
+  let label = document.querySelector('#label').value;    
+  // Creating a XHR object 
+  let xhr = new XMLHttpRequest(); 
+  let url = "https://ml-models-api-kristianf89.herokuapp.com/sentiment"; 
+  //let url = "http://127.0.0.1:5000/sentiment"; 
 
 
-    let data_intent = {
-        "sentence": intent,
-        "label": label
-    };
-    let options = {
-        url: url,
-        dataType: "text",
-        type: "GET",
-        data: data_intent,
-        success: function( data, status, xhr ) {
-            data = JSON.parse(data)
-            
-            if(data.score === "Positive"){
-              hide_orange();
-            }else{
-              hide_green();
-            }
+  let data_intent = {
+      "sentence": intent,
+      "label": label
+  };
+  
+  let options = {
+      url: url,
+      //dataType: "text",
+      contentType:"application/json",
+      type: "POST",
+      data: JSON.stringify(data_intent),
+      success: function( data, status, xhr ) {
+          //data = JSON.parse(data)
+          
+          if(data.score === "Positive"){
+            hide_orange();
+          }else{
+            hide_green();
+          }
 
-            alert(data.score);
-        },
-        error: function( xhr, status, error ) {
-            alert(error);
-        }
-    };
-    $.ajax( options );
-    } 
+          alert(data.score);
+      },
+      error: function( xhr, status, error ) {
+          alert(error);
+      }
+  };
+  $.ajax( options );
+} 
