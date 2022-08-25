@@ -118,9 +118,7 @@ function sendJSON(){
       contentType:"application/json",
       type: "POST",
       data: JSON.stringify(data_intent),
-        success: function( data, status, xhr ) {
-            data = JSON.parse(data)
-            
+        success: function( data, status, xhr ) {                       
             if(data.score === "Positive"){
               hide_orange();
             }else{
