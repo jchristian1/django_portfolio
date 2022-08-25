@@ -114,10 +114,10 @@ function sendJSON(){
         "sentence": intent
     };
     let options = {
-        url: url,
-        dataType: "text",
-        type: "GET",
-        data: data_intent,
+      url: url,
+      contentType:"application/json",
+      type: "POST",
+      data: JSON.stringify(data_intent),
         success: function( data, status, xhr ) {
             data = JSON.parse(data)
             

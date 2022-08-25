@@ -117,13 +117,11 @@ function sendJSON(){
   
   let options = {
       url: url,
-      //dataType: "text",
       contentType:"application/json",
       type: "POST",
       data: JSON.stringify(data_intent),
       success: function( data, status, xhr ) {
-          //data = JSON.parse(data)
-          
+                    
           if(data.score === "Positive"){
             hide_orange();
           }else{
