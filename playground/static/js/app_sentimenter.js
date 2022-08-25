@@ -99,7 +99,7 @@ function hide_orange(){
 }
 
 
-nction sendJSON(){ 
+function sendJSON(){ 
                
   let result = document.querySelector('#result'); 
   let intent = document.querySelector('#intent').value; 
