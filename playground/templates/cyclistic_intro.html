@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="{% static 'css/styles_spammer.css' %}"> -->
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-    <title>Spammer</title>
+    <title>Cyclistic</title>
 </head>
 <body>
     <!-- ======= About Section ======= --><br><br>
@@ -14,10 +14,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
-                    <img src="{% static 'img/portfolio/portfolio-7.jpg' %}" class="img-fluid" alt="">
+                    <img src="{% static 'img/portfolio/portfolio-1.jpg' %}" class="img-fluid" alt="">
                 </div>                
                 <div class="col-lg-4">
-                    <h2>Spam detection SVM</h2>
+                    <h2>Cyclistic Google case</h2>
                 </div>
             </div>
         </div><br><br>
@@ -25,18 +25,18 @@
             <div class="row">
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8">
-                    <p>This project was created with the goal of classify string inputs in two groups Spam or Not Spam (Ham).<br>
-                        I used two different classification algorithms to find out wich one perform better, Support vector machine or random forest.
-                         Support vector machines was superior for 1% having 95% of accuracy.<br> 
-                     <h3>Limitations</h3>    
-                     <p>The dataset used for this project was really small having just 5.572 observations, but once cleaned just 1.494 observations. 
-                         This means the algorithm wont be as accurate as needed because still need more observations to get better doing this task.<br>
-                         If you are intersted in uderstanding al the process required for this project you can find a jupyter nootebook with all the 
-                         steps required <a href="https://github.com/jchristian1/spam_detection/blob/main/spam_classification.ipynb">here</a> in my github.         
+                    <p>In 2016, Cyclistic launched a successful bike-share offering. Since then, the program has grown to a fleet of 5,824 bicycles that
+                        are geotracked and locked into a network of 692 stations across Chicago. The bikes can be unlocked from one station and
+                        returned to any other station in the system anytime.<br> 
+                     <p>
+                        Cyclistic’s finance analysts have concluded that annual members are much more profitable than casual riders. Although the
+                        pricing flexibility helps Cyclistic attract more customers, Moreno believes that maximizing the number of annual members will
+                        be key to future growth. Rather than creating a marketing campaign that targets all-new customers, Moreno believes there is a
+                        very good chance to convert casual riders into members. She notes that casual riders are already aware of the Cyclistic
+                        program and have chosen Cyclistic for their mobility needs.
                      </p>
-                    <h3>Try it by yourself</h3>
-                    <p>You can insert the text you want to be processed in the next textbox to find out what would be the clasification for your text (Spam or Ham).<br><br>                    
-                        For instance: "Congratulations, you have won a newly ferrari, to claim your prize call us now". <br><br></p>
+                    <p>The Marketing director set a Bussines task for me. I have to tell a history based on the dataset they will provide to me. The question is:<br><br></p>
+                    <p>How do annual members and casual riders use Cyclistic bikes differently?</p>
                 </div>
                 <div class="col-lg-2"></div>
             </div>
@@ -46,11 +46,10 @@
             <div class="row">
                 <div class="col-lg-2"></div>
                 <div class="col-lg-6">
-                    <input type="text" class="form-control" id="intent">
-                    <input type="text" id="label" style="display: none;">                   
+                    <a href="{% url 'cyclist' %}" class="btn btn-primary">See complete analysis</a>
                 </div>
                 <div class="col-lg-3">
-                    <button type="button" class="btn btn-primary" onclick="validation()" >Send</button>
+                    
                     <div id="result"></div>
                 </div>
                 <div class="col-lg-1"></div>

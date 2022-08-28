@@ -26,3 +26,11 @@ function sendJSON(){
     };
     $.ajax( options );
     } 
+
+    function validation(){
+      if(!$('#intent').val()){
+          $('#result').html("<br><div class='alert alert-success' role='alert'>Please insert a text.</div>");
+      }else{
+          sendJSON();
+      }
+    }
