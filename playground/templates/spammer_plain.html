@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="{% static 'css/styles_spammer.css' %}"> -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <title>Spammer</title>
+</head>
+<body>
+    <!-- ======= About Section ======= --><br><br>
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <img src="{% static 'img/portfolio/portfolio-7.jpg' %}" class="img-fluid" alt="">
+                </div>                
+                <div class="col-lg-4">
+                    <h2>Spam detection SVM</h2>
+                </div>
+            </div>
+        </div><br><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <p>This project was created with the goal of classify string inputs in two groups Spam or Not Spam (Ham).<br>
+                        I used two different classification algorithms to find out wich one perform better, Support vector machine or random forest.
+                         Support vector machines was superior for 1% having 95% of accuracy.<br> 
+                     <h3>Limitations</h3>    
+                     <p>The dataset used for this project was really small having just 5.572 observations, but once cleaned just 1.494 observations. 
+                         This means the algorithm wont be as accurate as needed because still need more observations to get better doing this task.<br>
+                         If you are intersted in uderstanding al the proccess required for this process you can find a jupyter nootebook with all the 
+                         steps required <a href="https://github.com/jchristian1/spam_detection/blob/main/spam_classification.ipynb">here</a> in my github.         
+                     </p>
+                    <h3>Try it by yourself</h3>
+                    <p>You can insert the text you want to be processed in the next textbox to find out what would be the clasification for your text (Spam or Ham.)<br><br>                    
+                        For instance: "Congratulations, you have won a newly ferrari, to claim your prize call us now". <br><br></p>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+        </div> 
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-6">
+                    <input type="text" class="form-control" id="intent">
+                    <input type="text" id="label" style="display: none;">                   
+                </div>
+                <div class="col-lg-3">
+                    <button type="button" class="btn btn-success" onclick="sendJSON()" >Send</button>
+                    <div id="result"></div>
+                </div>
+                <div class="col-lg-1"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <br>If you want to know how the architecture of this site works <a href="">click here.</a><br>                
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+      </section><!-- End About Section -->     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="{% static 'js/gsap.min.js' %}"></script>
+    <script src="{% static 'js/app_spammer.js' %}"></script>
+</body>
+</html>

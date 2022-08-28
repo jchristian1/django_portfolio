@@ -7,5 +7,9 @@ def cyclist_project(request):
     return render(request, 'cyclistic.html')
 def sentimenter(request):
     return render(request, 'sentimenter.html')
+def sentimenter_plain(request):
+    return render(request, 'sentimenter_plain.html')
 def spammer(request):
     return render(request, 'spammer.html')
+def spammer_plain(request):
+    return render(request, 'spammer_plain.html')
