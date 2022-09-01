@@ -23,41 +23,39 @@
                 <div class="col-lg-2"></div>
             </div>
         </div><br><br>
-        <center><h1>Being developed ...</h1></center>
-        <!-- <div class="container">
+        <!-- <center><h1>Being developed ...</h1></center> -->
+        <div class="container">
             <div class="row">
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8">
-                    <p>In 2016, Cyclistic launched a successful bike-share offering. Since then, the program has grown to a fleet of 5,824 bicycles that
-                        are geotracked and locked into a network of 692 stations across Chicago. The bikes can be unlocked from one station and
-                        returned to any other station in the system anytime.<br> 
-                     <p>
-                        Cyclistic’s finance analysts have concluded that annual members are much more profitable than casual riders. Although the
-                        pricing flexibility helps Cyclistic attract more customers, Moreno believes that maximizing the number of annual members will
-                        be key to future growth. Rather than creating a marketing campaign that targets all-new customers, Moreno believes there is a
-                        very good chance to convert casual riders into members. She notes that casual riders are already aware of the Cyclistic
-                        program and have chosen Cyclistic for their mobility needs.
-                     </p>
-                    <p>The Marketing director set a Bussines task for me. I have to tell a history based on the dataset they will provide to me. The question is:<br><br></p>
-                    <p>How do annual members and casual riders use Cyclistic bikes differently?</p>
+                    <p>The Back-End of this site was built using python. First i created a django application just to render the views of the site,
+                        the second part of this project was to create an API using really helpfull library called Flask. 
+                        The last part of the website was the projects themself (ML models or Data Analysis projects).<br> 
+                    
+                    <ol>
+                        <li><b>Django views rendering:</b></li>
+                        <p>
+                            The site starts at home route that displays the landing page of the site, it has About content, resume content,
+                            portfolio content and contact content. the portfolio have different projects in different topics, if you click any data anaysis project,
+                            you will see an introduction and at the end of this introduction you could be redirected to the complete analysis, it could be Python or R code.
+                         </p>
+                        <li><b >Flask API:</b></li>
+                        <p>
+                            The Flask API was built to serve Machine Learning, Deep Learning or Fine Tuning projects, it does not have authentication code for simplicity
+                            for people that does not have time to log in. There are different models uploaded and will be more in the future.
+                        </p>
+                        <li><b>ML models, and Data Analysis:</b></li>
+                        <p>
+                            All A.I models have been built using python and its dedicated libraries for Machine Learning and Deep learning. I have used jupyter notebooks also
+                            to create and document all the steps needed to train the algorithms (you can find the code of these projects on my <a href="https://github.com/jchristian1">github</a>).
+                        </p>
+                    </ol>  
+                    <p>If you have any question please contact me on my <a href="https://www.linkedin.com/in/jasson-florez-844108101/">Linked in</a>.</p>             
                 </div>
                 <div class="col-lg-2"></div>
             </div>
         </div> 
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-2"></div>
-                <div class="col-lg-6">
-                    <a href="{% url 'cyclist' %}" class="btn btn-primary">See complete analysis</a>
-                </div>
-                <div class="col-lg-3">
-                    
-                    <div id="result"></div>
-                </div>
-                <div class="col-lg-1"></div>
-            </div>
-        </div>        -->
+            
       </section><!-- End About Section -->     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="{% static 'js/gsap.min.js' %}"></script>
